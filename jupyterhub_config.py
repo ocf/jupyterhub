@@ -164,7 +164,7 @@
 #c.JupyterHub.cookie_secret_file = 'jupyterhub_cookie_secret'
 
 ## The location of jupyterhub data files (e.g. /usr/local/share/jupyterhub)
-#c.JupyterHub.data_files_path = 'c:\\users\\jimmy\\documents\\repos\\ocf\\jupyterhub\\.venv\\share\\jupyterhub'
+#c.JupyterHub.data_files_path = '/tmp/venv/share/jupyterhub'
 
 ## Include any kwargs to pass to the database connection. See
 #  sqlalchemy.create_engine for details.
@@ -376,8 +376,8 @@
 #              e.g. `c.JupyterHub.proxy_class = 'traefik'`
 #  
 #  Currently installed: 
-#    - configurable-http-proxy: jupyterhub.proxy.ConfigurableHTTPProxy
 #    - default: jupyterhub.proxy.ConfigurableHTTPProxy
+#    - configurable-http-proxy: jupyterhub.proxy.ConfigurableHTTPProxy
 #c.JupyterHub.proxy_class = 'jupyterhub.proxy.ConfigurableHTTPProxy'
 
 ## DEPRECATED since version 0.8. Use ConfigurableHTTPProxy.command
@@ -439,8 +439,8 @@
 #  
 #  Currently installed: 
 #    - default: jupyterhub.spawner.LocalProcessSpawner
-#    - localprocess: jupyterhub.spawner.LocalProcessSpawner
 #    - simple: jupyterhub.spawner.SimpleLocalProcessSpawner
+#    - localprocess: jupyterhub.spawner.LocalProcessSpawner
 #c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
 
 ## Path to SSL certificate file for the public facing interface of the proxy
@@ -944,4 +944,4 @@
 #c.CryptKeeper.keys = []
 
 ## The number of threads to allocate for encryption
-#c.CryptKeeper.n_threads = 4
+#c.CryptKeeper.n_threads = 8
